@@ -38,7 +38,9 @@ const PictureConvertChinpoUI = () => {
         }
   }
 
-  const url = "http://127.0.0.1:8000/chinpo";
+  //const url = "http://127.0.0.1:8000/chinpo"; //ローカル用
+
+  const url = "https://afternoon-badlands-48725.herokuapp.com/chinpo"; //デプロイ用
 
     const onClick = (e) => {
       const src = document.getElementById('original-image').src;

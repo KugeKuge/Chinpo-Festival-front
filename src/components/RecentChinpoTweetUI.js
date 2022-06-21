@@ -2,7 +2,9 @@ import React from 'react'
 import axios from "axios";
 
 const RecentChinpoTweetUI = () => {
-  const url = "http://127.0.0.1:8000/getRecentChinpo";
+  //const url = "http://127.0.0.1:8000/getRecentChinpo"; //ローカル用
+
+  const url = "https://afternoon-badlands-48725.herokuapp.com/getRecentChinpo"; //デプロイ用
   
 	const GetData = () => {
     document.getElementById('processing-message').textContent = "取得中。ちょっと待ってね。"
