@@ -17,10 +17,10 @@ function App() {
       <NavBar />     
       <main className="container mx-autops-3 pb-12">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="ChinpoTweet" element={<ChinpoTweet />} />
-          <Route path="ChinpoFace" element={<ChinpoFace />} />
-          <Route path="/*" element={<NotFound />} />
+          <Route path="/" title="ちんぽの宿" element={<Home />} />
+          <Route path="ChinpoTweet" title="俺とお前のちんぽついーと" element={<ChinpoTweet />} />
+          <Route path="ChinpoFace" title="お前の顔面は所詮陰茎" element={<ChinpoFace />} />
+          <Route path="/*" title="ちんぽを探して。女の子になっちゃう。" element={<NotFound />} />
         </Routes>
       </main>
       <br></br>
