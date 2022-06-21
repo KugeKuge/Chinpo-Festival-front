@@ -43,6 +43,7 @@ const PictureConvertChinpoUI = () => {
   const url = "https://afternoon-badlands-48725.herokuapp.com/chinpo"; //デプロイ用
 
     const onClick = (e) => {
+      document.getElementById('processing-message').textContent = "ちんぽ貼り付け中。ちょっと待ってね。"
       const src = document.getElementById('original-image').src;
 
       if (src !== "") {
@@ -71,6 +72,8 @@ const PictureConvertChinpoUI = () => {
 
                 document.getElementById('chinpo-image').width = magnification * wkWidth
                 document.getElementById('chinpo-image').height = magnification * wkHeight
+
+                document.getElementById('processing-message').textContent = "な、陰茎だろ？"
               }
             }
         )
@@ -90,7 +93,9 @@ const PictureConvertChinpoUI = () => {
           className="shadow-lg px-2 py-1 bg-blue-400 text-lg text-white font-semibold rounded hover:bg-blue-500 hover:shadow-sm hover:translate-y-0.5 transform transition"
           onClick={onClick}>ちんぽにゃ
         </button>
-
+        <br></br>
+        <p className="text-base text-gray-700 md:text-lg" id="processing-message">
+        </p>
         <br></br>
         <img id="original-image" ref={userImg}/>
         <img id="chinpo-image" className="chinpo-image"/>
