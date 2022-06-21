@@ -8,6 +8,11 @@ const RecentChinpoTweetUI = () => {
   
 	const GetData = () => {
     document.getElementById('processing-message').textContent = "取得中。ちょっと待ってね。"
+
+    // いったんリストを空に
+    const ul = document.getElementById('chinpoTweetList');
+    ul.replaceChildren();
+    
 		axios.get(url).then((res) => {
       const ret = res.data;
       for (let i = 0; i < ret.length; i++) {
