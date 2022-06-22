@@ -43,10 +43,10 @@ const PictureConvertChinpoUI = () => {
   const url = "https://afternoon-badlands-48725.herokuapp.com/chinpo"; //デプロイ用
 
     const onClick = (e) => {
-      document.getElementById('processing-message').textContent = "ちんぽ貼り付け中。ちょっと待ってね。"
       const src = document.getElementById('original-image').src;
 
       if (src !== "") {
+        document.getElementById('processing-message').textContent = "ちんぽ貼り付け中。ちょっと待ってね。"
         axios.post(
             url,
             {
