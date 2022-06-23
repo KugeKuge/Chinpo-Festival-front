@@ -4,7 +4,12 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+              // ツイッター用の色
+              colors: {
+                'twitter': '#1DA1F2',
+              }
+    },
   },
   plugins: [],
 }

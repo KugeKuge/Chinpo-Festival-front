@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logoImage from "../logo.png";
+import twitterImage from "../twitterIcon.png";
 
 function NavBar() {
 
@@ -95,6 +96,18 @@ function NavBar() {
             </div>
           )}
         </div>
+      </div>
+      <div className="flex justify-center">
+        <br></br>
+            <a
+              href="https://twitter.com/intent/tweet?text=%E9%99%B0%E8%8C%8E%E3%81%AE%E3%81%8A%E7%A5%AD%E3%82%8A%E3%81%98%E3%82%83%20~Chinpo%20Festival%20in%20%E3%81%A1%E3%82%93%E3%81%BD%E3%81%AE%E5%AE%BF~%20https%3A%2F%2Fchinpo-festival-front.vercel.app%20%23Chinpo_Festival%20%23%E3%81%A1%E3%82%93%E3%81%BD%E3%81%AE%E5%AE%BF"
+              target="_blank"
+            >
+              <img
+                className="hover:shadow-sm hover:translate-y-0.5 inline-flex items-center mr-8"
+                src={twitterImage} width="100" height="50"
+              />
+            </a>
       </div>
     </div>
   );
