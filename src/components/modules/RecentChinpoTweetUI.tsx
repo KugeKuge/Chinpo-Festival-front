@@ -1,20 +1,28 @@
-import React from 'react'
 import axios from "axios";
 
 const RecentChinpoTweetUI = () => {
-  //const url = "http://127.0.0.1:8000/getRecentChinpo"; //ローカル用
+  const url = "http://127.0.0.1:8000/getRecentChinpo"; //ローカル用
 
-  const url = "https://afternoon-badlands-48725.herokuapp.com/getRecentChinpo"; //デプロイ用
+  //const url = "https://afternoon-badlands-48725.herokuapp.com/getRecentChinpo"; //デプロイ用
   
 	const GetData = () => {
-    document.getElementById('processing-message').textContent = "取得中。ちょっと待ってね。"
+    const processingMessageElement = document.getElementById('processing-message');
+
+    if (processingMessageElement) {
+      processingMessageElement.textContent = "取得中。ちょっと待ってね。"
+    }
 
     // いったんリストを空に
     const ul = document.getElementById('chinpoTweetList');
-    ul.replaceChildren();
-    
-		axios.get(url).then((res) => {
+
+    if (ul) {
+      ul.replaceChildren();
+    }
+		
+    axios.get(url).then((res) => {
       const ret = res.data;
+      const chinpoTweetListElement = document.getElementById('chinpoTweetList');
+
       for (let i = 0; i < ret.length; i++) {
           const li = document.createElement('li');
           const innerUl = document.createElement('innerUl');
@@ -36,13 +44,21 @@ const RecentChinpoTweetUI = () => {
           li.style.textAlign = "left";
           li.style.paddingTop = "20px";
 
-          document.getElementById('chinpoTweetList').appendChild(li);
+          if (chinpoTweetListElement) {
+            chinpoTweetListElement.appendChild(li);
+          }
 
 //          li.textContent = ret[i].user_name + " (@" + ret[i].user_id + ") " + ret[i].text + "  " + ret[i].created_at;
 
           //document.getElementById('chinpoTweetList').appendChild(li);
       }
-      document.getElementById('processing-message').textContent = "ちんぽいっぱい採れましたぁ♡"
+      
+      const processingMessageElement = document.getElementById('processing-message');
+
+      if (processingMessageElement) {
+        processingMessageElement.textContent = "ちんぽいっぱい採れましたぁ♡"
+      }
+
 		});
 	};
   
@@ -54,7 +70,7 @@ const RecentChinpoTweetUI = () => {
           <h2 id="processing-message"></h2>
         </div>
         <br></br>
-        <font size="5"><ul id="chinpoTweetList" className="content-list"></ul></font>
+        <ul id="chinpoTweetList" className="content-list text-6xl"></ul>
       </ div>
     );
   }
