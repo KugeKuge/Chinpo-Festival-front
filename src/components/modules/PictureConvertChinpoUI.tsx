@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useRef } from 'react';
+import React from 'react';
 import { useHooksForImageUpload } from '../../app/hooks';
 import { styles, imageDisplaySize } from '../../app/styles';
 
@@ -76,10 +76,8 @@ const PictureConvertChinpoUI = () => {
           className="shadow-lg px-2 py-1 bg-blue-400 text-lg text-white font-semibold rounded hover:bg-blue-500 hover:shadow-sm hover:translate-y-0.5 transform transition"
           onClick={onClick}>ちんぽにゃ
         </button>
-        <br></br>
         <p className="text-base text-gray-700 md:text-lg" id="processing-message">
         </p>
-        <br></br>
         <div id="original-image" className="original-image" ref={imageContainerRef} style={{...styles.imageContainer}} />
         <img id="chinpo-image" className="chinpo-image"/>
       </div>

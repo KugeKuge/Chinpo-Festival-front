@@ -8,13 +8,15 @@ import ChinpoTweet from "./components/pages/ChinpoTweet";
 import ChinpoFace from "./components/pages/ChinpoFace";
 import NavBar from "./components/modules/NavBar";
 import Footer from "./components/modules/Footer";
+import ChinpoCount from "./components/modules/ChinpoCount";
 import NotFound from "./components/pages/NotFound";
 
 function App() {
 
   return (
     <BrowserRouter>
-      <NavBar />     
+      <NavBar />
+      <ChinpoCount />
       <main className="container mx-autops-3 pb-12">
         <Routes>
           <Route path="/" element={<Home />} />

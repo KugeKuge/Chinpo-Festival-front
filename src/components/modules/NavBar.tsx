@@ -1,11 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { countUpChinpo } from '../../features/chinpoString/chinpoStringSlice';
 import logoImage from "../../images/logo.png";
 import twitterImage from "../../images/twitterIcon.png";
+import { useDispatch } from 'react-redux';
 
 function NavBar() {
 
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const dispatch = useDispatch();
+
   return (
     <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="relative flex items-center justify-between">
@@ -107,6 +111,7 @@ function NavBar() {
             src={twitterImage} width="100" height="50"
           />
         </a>
+        <button className="shadow-lg px-2 py-1 bg-blue-400 text-lg text-white font-semibold rounded hover:bg-blue-500 hover:shadow-sm hover:translate-y-0.5 transform transition"  onClick={() => dispatch(countUpChinpo(""))}>ちんぽ</button>
       </div>
     </div>
   );

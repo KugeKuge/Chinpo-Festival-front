@@ -22,7 +22,9 @@ function ChinpoFace() {
           任意の顔写真を選択してちんぽにゃ。
         </p>
           <br></br>
+        <p className="inline-block">
           <PictureConvertChinpoUI/>
+        </p>
       </div>
     </div>
   );

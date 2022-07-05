@@ -70,7 +70,7 @@ const RecentChinpoTweetUI = () => {
           <h2 id="processing-message"></h2>
         </div>
         <br></br>
-        <ul id="chinpoTweetList" className="content-list text-6xl"></ul>
+        <ul id="chinpoTweetList" className="content-list text-2xl"></ul>
       </ div>
     );
   }
