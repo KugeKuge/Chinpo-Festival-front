@@ -1,9 +1,9 @@
 import axios from "axios";
 
 const RecentChinpoTweetUI = () => {
-  const url = "http://127.0.0.1:8000/getRecentChinpo"; //ローカル用
+  //const url = "http://127.0.0.1:8000/getRecentChinpo"; //ローカル用
 
-  //const url = "https://afternoon-badlands-48725.herokuapp.com/getRecentChinpo"; //デプロイ用
+  const url = "https://afternoon-badlands-48725.herokuapp.com/getRecentChinpo"; //デプロイ用
   
 	const GetData = () => {
     const processingMessageElement = document.getElementById('processing-message');
