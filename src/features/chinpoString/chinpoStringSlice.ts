@@ -21,10 +21,14 @@ export const chinpoStringSlice = createSlice({
       state.chinpoString = state.chinpoString + "ちんぽ";
       state.count += 1;
     },
+    resetChinpo: (state, action) => {
+      state.chinpoString = "";
+      state.count = 0;
+    },
 
   },
 });
 
-export const { setChinpoString, setCount, setChinpoStringJson, countUpChinpo } = chinpoStringSlice.actions;
+export const { setChinpoString, setCount, setChinpoStringJson, countUpChinpo, resetChinpo } = chinpoStringSlice.actions;
 
 export default chinpoStringSlice.reducer;

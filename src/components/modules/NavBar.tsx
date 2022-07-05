@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { countUpChinpo } from '../../features/chinpoString/chinpoStringSlice';
+import { countUpChinpo, resetChinpo } from '../../features/chinpoString/chinpoStringSlice';
 import logoImage from "../../images/logo.png";
 import twitterImage from "../../images/twitterIcon.png";
 import { useDispatch } from 'react-redux';
@@ -112,6 +112,8 @@ function NavBar() {
           />
         </a>
         <button className="shadow-lg px-2 py-1 bg-blue-400 text-lg text-white font-semibold rounded hover:bg-blue-500 hover:shadow-sm hover:translate-y-0.5 transform transition"  onClick={() => dispatch(countUpChinpo(""))}>ちんぽ</button>
+        <div><h2>&nbsp;&nbsp;</h2></div>
+        <button className="shadow-lg px-2 py-1 bg-blue-400 text-lg text-white font-semibold rounded hover:bg-blue-500 hover:shadow-sm hover:translate-y-0.5 transform transition"  onClick={() => dispatch(resetChinpo(""))}>陰嚢爆破</button>
       </div>
     </div>
   );
